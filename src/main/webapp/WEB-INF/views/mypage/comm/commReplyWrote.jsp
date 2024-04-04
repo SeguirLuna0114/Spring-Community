@@ -2,7 +2,7 @@
 <%@ include file="../layout/header.jsp"%>
 
 <head>
-<link href="${path}/css/mypage/proposal.css?after" rel="stylesheet">
+<link href="${path}/css/mypage/contLists.css?after" rel="stylesheet">
 
 <%-- <script src="${path}/js/mypage/commWroteList.js"></script> --%>
 
@@ -107,17 +107,17 @@
 </script>
 
 <style type="text/css">
-	.cp_item_bot {
+	.comm_item_bot {
 		width: 100%;
 		text-align: center;
 	}
 	
-	.cp_item_bot_Left {
+	.comm_item_bot_Left {
 		width: 100%;
 		text-align: left;
 	}
 	
-	.cp_item_bot .cp_wanted_modify {
+	.comm_item_bot .comm_wanted_modify {
 		font-size: 12px;
 		color: rgb(64, 64, 64);
 		line-height: 2em;
@@ -128,7 +128,7 @@
 		box-sizing: border-box;
 	}
 	
-	.cp_item_bot_Left .cp_wanted_modify {
+	.comm_item_bot_Left .comm_wanted_modify {
 		font-size: 12px;
 		color: rgb(64, 64, 64);
 		line-height: 2em;
@@ -145,19 +145,19 @@
 </head>
 
 <div id="wrap">
-	<div id="pp_wrap">
-		<div class="pp_menu">
-			<p class="pp_title">커뮤니티 글 관리</p>
+	<div id="list_wrap">
+		<div class="list_menu">
+			<p class="list_title">커뮤니티 글 관리</p>
 			<ul>
-				<li class="pp_position"><a href="commWroteAll.do">작성 글</a></li>
-				<li class="pp_proposal"><a href="commReplyWrote.do">작성 댓글</a></li>
-				<li class="pp_position"><a href="likeListsComm.do">좋아요 한 글</a></li>
+				<li class="list_position"><a href="commWroteAll.do">작성 글</a></li>
+				<li class="list_proposal"><a href="commReplyWrote.do">작성 댓글</a></li>
+				<li class="list_position"><a href="likeListsComm.do">좋아요 한 글</a></li>
 			</ul>
 		</div>
 
-		<div class="pp_contents">
-			<p class="pp_sub_title">작성 댓글</p>
-			<div class="pp_search">
+		<div class="list_contents">
+			<p class="list_sub_title">작성 댓글</p>
+			<div class="list_search">
 				<form name="searchProposal" action="commReplyWrote.do">
 					<input id="keyword" type="text" placeholder="글 제목/내용 검색" name="keyword"
 					 value="${sessionScope.referer != null ? sessionScope.referer.keyword : ''}">
@@ -167,15 +167,15 @@
 			</div>
 			
 			<!-- 삭제버튼 -->
-			<div class="pp_search">
-				<div class="cp_item_bot_Left">
-					<a href="#" class="cp_wanted_modify" id="deleteBtnReComm" onclick="check_selectDel();">선택 삭제</a>
+			<div class="list_search">
+				<div class="comm_item_bot_Left">
+					<a href="#" class="comm_wanted_modify" id="deleteBtnReComm" onclick="check_selectDel();">선택 삭제</a>
 				</div>			
 			</div>
 
 			<div>
 				<form action="deleteReplyComm.do" name="deleteReplyComm" id="deleteReplyComm">
-					<table class="pp_table">
+					<table class="list_table">
 						<thead>
 							<tr>
 								<th><input type="checkbox" id="selectAll" onclick="toggleAllCheckboxes()"></th>
@@ -201,13 +201,13 @@
 									<td><p class="cnt_highlight">${commReplyInfoVOs.commreplyCnt}</p></td>
 									<td>${commReplyInfoVOs.commReUpdate}</td>
 									<td>
-										<div class="cp_item_bot">
-											<a href="#" class="cp_wanted_modify">수정</a>
+										<div class="comm_item_bot">
+											<a href="#" class="comm_wanted_modify">수정</a>
 										</div>
 									</td>
 									<td>
-										<div class="cp_item_bot">
-											<a href="#" class="cp_wanted_modify" onclick="selectOneDel('${commReplyInfoVOs.commReNo}');">삭제</a>
+										<div class="comm_item_bot">
+											<a href="#" class="comm_wanted_modify" onclick="selectOneDel('${commReplyInfoVOs.commReNo}');">삭제</a>
 										</div>
 									</td>
 								</tr>
