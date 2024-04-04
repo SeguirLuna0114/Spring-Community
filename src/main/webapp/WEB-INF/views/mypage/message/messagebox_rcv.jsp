@@ -4,7 +4,7 @@
 <%@ include file="../layout/header.jsp"%>
 
 <head>
-<link href="${path}/css/mypage/proposal.css?after" rel="stylesheet">
+<link href="${path}/css/mypage/contLists.css?after" rel="stylesheet">
 
 <!-- 메시지 관련 js파일 -->
 <%-- <script src="${path}/js/mypage/message.js"></script> --%>
@@ -146,20 +146,20 @@
 
 <form id="chkNoForm">
 <div id="wrap">
-	<div id="pp_wrap">
-		<div class="pp_menu">
-			<p class="pp_title">✉️쪽지함</p>
+	<div id="list_wrap">
+		<div class="list_menu">
+			<p class="list_title">✉️쪽지함</p>
 			<ul>
-				<li class="pp_proposal"><a href="messagebox_rcv.do">rcv</a></li>
-				<li class="pp_position"><a href="messagebox_snd.do">send</a></li>
+				<li class="list_proposal"><a href="messagebox_rcv.do">rcv</a></li>
+				<li class="list_position"><a href="messagebox_snd.do">send</a></li>
 			</ul>
 		</div>
 
 
-		<div class="pp_contents">
-			<p class="pp_sub_title">📩 받은 쪽지함</p>
+		<div class="list_contents">
+			<p class="list_sub_title">📩 받은 쪽지함</p>
 			<!-- 검색창 -->
-			<div class="pp_search">
+			<div class="list_search">
 				<form name="searchProposal" action="messagebox_rcv.do">
 					<input id="keyInTxt" type="text" placeholder="내용/수신인 검색"
 						name="keyInTxt"
@@ -169,14 +169,14 @@
 			</div>
 
 			<!-- 삭제버튼 -->
-			<div class="pp_search">
+			<div class="list_search">
 				<div class="cp_item_bot_Left">
 					<a class="cp_wanted_modify" id="deleteBtnMsg" onclick="check_selectDel();">선택 삭제</a>
 				</div>
 			</div>
 
 			<div>
-				<table class="pp_table">
+				<table class="list_table">
 					<thead>
 						<tr>
 							<th><input type="checkbox" id="selectAll"
