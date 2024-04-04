@@ -9,7 +9,7 @@
 	
 <script>
 	function changePage() {
-		var select = document.getElementById("cp_option_select");
+		var select = document.getElementById("my_manage_option_select");
 		var selectedValue = select.options[select.selectedIndex].value;
 
 		if (selectedValue === "applyStatus_main") {
@@ -63,8 +63,8 @@
 					</c:forEach>
 				</div>
 
-				<div class="cp_menu">
-					<select name="cp_option" id="cp_option_select" onchange="changePage()">
+				<div class="my_manage_menu">
+					<select name="my_manage_option" id="my_manage_option_select" onchange="changePage()">
 						<option value="applyStatus_main" selected="selected">지원 공고 관리</option>
 						<option value="recruitStatus_main">작성 공고 관리</option>
 					</select>
