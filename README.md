@@ -24,7 +24,7 @@
 ### 🎹 Installation
 
 ```
-git clone <https://github.com/SeguirLuna0114/Spring-Community.git>
+git clone <https://github.com/SeguirLuna0114/Spring-Community-Project.git>
 ```
 
 ### 🎹 Backend
@@ -85,7 +85,7 @@ naverId.login.develApp.key=xJeBrLOKcF1jhMTonLZ_
 
 ### ✔ 아키텍처
 
-![spring_commproject_Architecture](https://github.com/SeguirLuna0114/Spring-Community/blob/main/img/Architecture_spring.png?raw=true)
+![spring_commproject_Architecture](https://github.com/SeguirLuna0114/Spring-Community-Project/blob/main/img/Architecture_spring.png?raw=true)
 
 > - AWS 및 Java Spring을 활용하여 기능 구현
 
@@ -93,7 +93,7 @@ naverId.login.develApp.key=xJeBrLOKcF1jhMTonLZ_
 
 ### ✔ DB 설계
 
-![spring_commproject_DB](https://github.com/SeguirLuna0114/Spring-Community/blob/main/img/DB_obri.png?raw=true)
+![spring_commproject_DB](https://github.com/SeguirLuna0114/Spring-Community-Project/blob/main/img/DB_obri.png?raw=true)
 
 <br/>
 
@@ -101,19 +101,19 @@ naverId.login.develApp.key=xJeBrLOKcF1jhMTonLZ_
 
 |  |  |
 | ------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------|
-|![mainhome](https://github.com/SeguirLuna0114/Spring-Community/blob/main/img/mainhome_obri.png?raw=true)|![mainhome_login](https://github.com/SeguirLuna0114/Spring-Community/blob/main/img/mainhome_userLogin_obri.png?raw=true)|
+|![mainhome](https://github.com/SeguirLuna0114/Spring-Community-Project/blob/main/img/mainhome_obri.png?raw=true)|![mainhome_login](https://github.com/SeguirLuna0114/Spring-Community-Project/blob/main/img/mainhome_userLogin_obri.png?raw=true)|
 |홈화면|로그인후 홈화면|
-|![mypage_apply](https://github.com/SeguirLuna0114/Spring-Community/blob/main/img/mypage_apply_obri.png?raw=true)|![mypage_jobManage](https://github.com/SeguirLuna0114/Spring-Community/blob/main/img/mypage_jobBoard_obri.png?raw=true)|
+|![mypage_applyManage](https://github.com/SeguirLuna0114/Spring-Community-Project/blob/main/img/mypage_apply_obri.png?raw=true)|![mypage_jobManage](https://github.com/SeguirLuna0114/Spring-Community-Project/blob/main/img/mypage_jobBoard_obri.png?raw=true)|
 |마이페이지 - 지원공고 관리|마이페이지 - 구인공고 관리|
-|![image](https://github.com/SeguirLuna0114/Spring-Community/blob/main/img/rcvmessage_alert_obri.png?raw=true)|![image](https://github.com/SeguirLuna0114/Spring-Community/blob/main/img/prLike_obri.png?raw=true)|
+|![msgAlert](https://github.com/SeguirLuna0114/Spring-Community-Project/blob/main/img/rcvmessage_alert_obri.png?raw=true)|![liked_Pr](https://github.com/SeguirLuna0114/Spring-Community-Project/blob/main/img/prLike_obri.png?raw=true)|
 |쪽지 알림 및 조회|좋아요 설정 홍보 글 관리|
-|![image](https://github.com/SeguirLuna0114/Spring-Community/blob/main/img/login_obri.png?raw=true)|![image](https://github.com/SeguirLuna0114/Spring-Community/blob/main/img/findpasswd_obri.png?raw=true)|
+|![socialLogin](https://github.com/SeguirLuna0114/Spring-Community-Project/blob/main/img/login_obri.png?raw=true)|![findPasswd](https://github.com/SeguirLuna0114/Spring-Community-Project/blob/main/img/findpasswd_obri.png?raw=true)|
 |로그인 API 활용|비밀번호 찾기|
-|![image](https://github.com/SeguirLuna0114/Spring-Community/blob/main/img/jobBoard_withMap_obri.png?raw=true)|![image](https://github.com/SeguirLuna0114/Spring-Community/blob/main/img/prPage_obri.png?raw=true)|
+|![job_kakaomapAPI](https://github.com/SeguirLuna0114/Spring-Community-Project/blob/main/img/jobBoard_withMap_obri.png?raw=true)|![pr_embededLink_like](https://github.com/SeguirLuna0114/Spring-Community-Project/blob/main/img/prPage_obri.png?raw=true)|
 |구인 게시판 - 글 작성 및 지도API를 이용한 장소표시|홍보 게시판 - 유튜브 링크 및 좋아요 설정 |
-|![image](https://github.com/SeguirLuna0114/Spring-Community/blob/main/img/commPage_withsecret_obri.png?raw=true)|![image](https://github.com/SeguirLuna0114/Spring-Community/blob/main/img/comLike_obri.png?raw=true)|
+|![comm_like_secReply](https://github.com/SeguirLuna0114/Spring-Community-Project/blob/main/img/commPage_withsecret_obri.png?raw=true)|![liked_comm](https://github.com/SeguirLuna0114/Spring-Community-Project/blob/main/img/comLike_obri.png?raw=true)|
 |커뮤니티 게시판 - 글 작성 및 좋아요, 비밀글 설정|좋아요 설정 커뮤니티 글 관리|
-|![image](https://github.com/SeguirLuna0114/Spring-Community/blob/main/img/admin_manage_obri.png?raw=true)|![image](https://github.com/SeguirLuna0114/Spring-Community/blob/main/img/QnA_withFile_obri.png?raw=true)|
+|![admin_list](https://github.com/SeguirLuna0114/Spring-Community-Project/blob/main/img/admin_manage_obri.png?raw=true)|![QnA](https://github.com/SeguirLuna0114/Spring-Community-Project/blob/main/img/QnA_withFile_obri.png?raw=true)|
 |관리자 페이지 - 게시판 글 삭제| 문의 글 작성|
 
 <br>
