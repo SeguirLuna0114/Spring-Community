@@ -2,16 +2,16 @@
 <%@ include file="../layout/header.jsp"%>
 
 <head>
-<link href="${path}/css/mypage/likes.css" rel="stylesheet" />
+<link href="${path}/css/mypage/like_lists.css" rel="stylesheet" />
 
 <script src="${path}/js/mypage/like.js"></script>
 </head>
 
 <div class="container">
-	<div class="photosetting">
+	<div class="likes_setting">
 		<div class="liketitle">💖 좋아요한 커뮤니티 글 💖</div>
 		<c:if test="${empty likesListComm}">
-			<div class="replay_box">
+			<div class="replay_div">
 				<div class="full_setting">
 				    <div class="notice">
 				    	<div class="text">
@@ -24,26 +24,26 @@
 		
 		<c:if test="${!empty likesListComm}">
 		<c:forEach var="likesComm" items="${likesListComm}">
-			<div class="replay_box">
+			<div class="replay_div">
 				<div class="full_setting">
-					<div class="photocompany">
+					<div class="photofilecomm">
 						<c:choose>
 							<c:when test="${empty likesComm.commFile}">
-								<a href="boardContent.do?commNo=${likesComm.commNo}&pageNum=1"><img class="companyphoto" src='https://picsum.photos/250/250' alt="커뮤니티 첨부 이미지"></a>
+								<a href="boardContent.do?commNo=${likesComm.commNo}&pageNum=1"><img class="photoimgcomm" src='https://picsum.photos/250/250' alt="커뮤니티 첨부 이미지"></a>
 							</c:when>
 							<c:otherwise>
-								<%-- <a href="boardContent.do?commNo=${likesComm.commNo}&pageNum=1"><img class="companyphoto" src="${path}/upload/${likesComm.commFile}" width="250" height="250" alt="커뮤니티 첨부 이미지"></a> --%>
-								<a href="boardContent.do?commNo=${likesComm.commNo}&pageNum=1"><img class="companyphoto" src='https://picsum.photos/250/250' width="250" height="250" alt="커뮤니티 첨부 이미지"></a>
+								<%-- <a href="boardContent.do?commNo=${likesComm.commNo}&pageNum=1"><img class="photoimgcomm" src="${path}/upload/${likesComm.commFile}" width="250" height="250" alt="커뮤니티 첨부 이미지"></a> --%>
+								<a href="boardContent.do?commNo=${likesComm.commNo}&pageNum=1"><img class="photoimgcomm" src='https://picsum.photos/250/250' width="250" height="250" alt="커뮤니티 첨부 이미지"></a>
 							</c:otherwise>
 						</c:choose>
 					</div>
-					<div class="company_story">
+					<div class="commlike_conts">
 						<div class="contect_title">${likesComm.commSub}</div>
 						<div class="explanation">
 							<div class="explanation_text">${likesComm.commText}</div>
 						</div>
 
-						<div class="company_image">
+						<div class="comm_image">
 							<div class="test">
 								<c:choose>
 									<c:when test="${empty likesComm.prFile}">
