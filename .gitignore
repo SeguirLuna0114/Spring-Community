@@ -13,12 +13,3 @@ src/main/resources/config/application.properties
 
 ## css 파일
 
-
-## Package Files
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
