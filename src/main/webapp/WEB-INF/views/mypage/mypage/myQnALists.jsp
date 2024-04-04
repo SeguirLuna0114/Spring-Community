@@ -2,19 +2,19 @@
 <%@ include file="../layout/header.jsp"%>
 
 <head>
-<link href="${path}/css/mypage/proposal.css?after" rel="stylesheet">
-<link href="${path}/css/mypage/application_status_all.css" rel="stylesheet" />
+<link href="${path}/css/mypage/contLists.css?after" rel="stylesheet">
+<link href="${path}/css/mypage/my_alist_stat_all.css" rel="stylesheet" />
 
 <style type="text/css">
-	.pp_table td a:hover {
+	.list_table td a:hover {
 	  color: #a490d5;
 	}
 	
-	.pp_table td .notYetCheck {
+	.list_table td .notYetCheck {
 	  color: #e7bcbc;
 	}
 	
-	.pp_table td .Checked {
+	.list_table td .Checked {
 	  color: #cde661;
 	}
 </style>
@@ -157,17 +157,17 @@
 </head>
 
 <div id="wrap">
-	<div id="pp_wrap">
-		<div class="pp_menu">
-			<p class="pp_title">문의 글 관리</p>
+	<div id="list_wrap">
+		<div class="list_menu">
+			<p class="list_title">문의 글 관리</p>
 			<ul>
-				<li class="pp_proposal"><a href="myQnALists.do">작성 글</a></li>
+				<li class="list_proposal"><a href="myQnALists.do">작성 글</a></li>
 			</ul>
 		</div>
 
-		<div class="pp_contents">
-			<p class="pp_sub_title">1:1 문의</p>
-			<div class="pp_search">
+		<div class="list_contents">
+			<p class="list_sub_title">1:1 문의</p>
+			<div class="list_search">
 				<form name="searchProposal" action="myQnALists.do">
 					<input id="keyword" type="text" placeholder="글 제목/내용 검색" name="keyword" value="${sessionScope.referer != null ? sessionScope.referer.keyword : ''}">
 					<button class="btn_search" type="submit"></button>
@@ -175,7 +175,7 @@
 			</div>
 			
 			<!-- 삭제버튼 -->
-<!-- 			<div class="pp_search">
+<!-- 			<div class="list_search">
 				<div class="cp_item_bot_Left">
 					<a href="#" class="cp_wanted_modify" id="deleteBtnQnA" onclick="check_selectDel();">선택 삭제</a>
 				</div>			
@@ -183,7 +183,7 @@
 
 			<div>
 				<form action="deleteQnA.do" name="deleteQnA" id="deleteQnA">
-					<table class="pp_table">
+					<table class="list_table">
 						<thead>
 							<tr>
 								<th>제목</th>
