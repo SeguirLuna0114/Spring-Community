@@ -3,7 +3,7 @@
 
 <head>
 <link href="${path}/css/mypage/mypage.css" rel="stylesheet" />
-<link href="${path}/css/mypage/companypage_recruit_manage.css" rel="stylesheet" />
+<link href="${path}/css/mypage/mypage_jobBoard_manage.css" rel="stylesheet" />
 			
 <%-- <script src="${path}/js/mypage/mypageShift.js" /> --%>
 	
@@ -42,20 +42,20 @@
 
 
 <div id="wrap">
-	<div id="mp_wrap">
+	<div id="my_main_wrap">
 		<div class="mypage">
 			<p class="mypage_title">My Page</p>
 
-			<div class="mp_info">
-				<div class="mp_account">
+			<div class="my_main_info">
+				<div class="my_main_account">
 					<c:forEach var="userInfoVOs" items="${infoAllDto.userInfoVOs}">
-						<div class="mp_img"></div>
-						<div class="mp_acc">
-							<p class="mp_name">${userInfoVOs.userName}</p>
-							<p class="mp_call">${userInfoVOs.userPhone}</p>
-							<p class="mp_email">${userInfoVOs.userEmail}</p>
+						<div class="my_main_img"></div>
+						<div class="my_main_acc">
+							<p class="my_main_name">${userInfoVOs.userName}</p>
+							<p class="my_main_call">${userInfoVOs.userPhone}</p>
+							<p class="my_main_email">${userInfoVOs.userEmail}</p>
 						</div>
-						<div class="mp_acc_setting">
+						<div class="my_main_acc_setting">
 							<button>
 								<a href="editCheck.do">계정 설정하기</a>
 							</button>
@@ -70,38 +70,38 @@
 					</select>
 				</div>
 
-				<div class="mp_status">
+				<div class="my_main_status">
 					<c:forEach var="infoCountVOs" items="${infoAllDto.infoCountVOs}">
 						<ul>
 							<li>
 								<a href="applyStatusAll.do">
-									<div class="mp_status_li1">지원 현황</div>
+									<div class="my_main_status_li1">지원 현황</div>
 									<p class="application_notifications"></p>
 									<div>${infoCountVOs.applystatusAll}</div>
 								</a>
 							</li>
 							<li>
 								<a href="likeListsComm.do">
-									<div class="mp_status_li2">좋아요 한 커뮤니티</div>
+									<div class="my_main_status_li2">좋아요 한 커뮤니티</div>
 									<div>${infoCountVOs.commlikesCount}</div>
 								</a>
 							</li>
 							<li>
 								<a href="messagebox_rcv.do">
-									<div class="mp_status_li3">쪽지함</div>
+									<div class="my_main_status_li3">쪽지함</div>
 									<p class="proposal_notifications"></p>
 									<div>${infoCountVOs.messagesCount}</div>
 								</a>
 							</li>
 							<li>
 								<a href="commWroteAll.do">
-									<div class="mp_status_li4">커뮤니티 글 관리</div>
+									<div class="my_main_status_li4">커뮤니티 글 관리</div>
 									<div>${infoCountVOs.commCountAll}</div>
 								</a>
 							</li>
 							<li>
 								<a href="myQnALists.do">
-									<div class="mp_status_li4">문의 글 관리</div>
+									<div class="my_main_status_li4">문의 글 관리</div>
 									<div>${infoCountVOs.qnaCountAll}</div>
 								</a>
 							</li>
@@ -117,54 +117,54 @@
 			</div>
 		</div>
 
-		<div class="mp_contents">
-			<div class="mp_applications">
+		<div class="my_main_contents">
+			<div class="my_main_applications">
 				<c:forEach var="statusCountVOs" items="${infoAllDto.statusCountVOs}">
-					<p class="mp_application_title">지원 현황</p>
-					<div class="mp_application_counts">
-						<div class="mp_app_all">
+					<p class="my_main_application_title">지원 현황</p>
+					<div class="my_main_application_counts">
+						<div class="my_main_app_all">
 							<a href="applyStatusAll.do">
-								<p class="mp_all_count">${statusCountVOs.appstatusAll}</p>
-								<p class="mp_all_text">전체</p>
+								<p class="my_main_all_count">${statusCountVOs.appstatusAll}</p>
+								<p class="my_main_all_text">전체</p>
 							</a>
 						</div>
 
-						<div class="mp_app">
+						<div class="my_main_app">
 							<a href="applyStatus.do">
-								<p class="mp_count">${statusCountVOs.appstatusCont}</p>
-								<p class="mp_text">지원 완료</p>
+								<p class="my_main_count">${statusCountVOs.appstatusCont}</p>
+								<p class="my_main_text">지원 완료</p>
 							</a>
 						</div>
 
-						<div class="mp_app_final">
+						<div class="my_main_app_final">
 							<a href="applyStatusFin.do">
-								<p class="mp_final_count">${statusCountVOs.appstatusFin}</p>
-								<p class="mp_final_text">최종 합격</p>
+								<p class="my_main_final_count">${statusCountVOs.appstatusFin}</p>
+								<p class="my_main_final_text">최종 합격</p>
 							</a>
 						</div>
 					</div>
 				</c:forEach>
 			</div>
 
-			<div class="mp_position">
-				<p class="mp_position_title">프로필</p>
-				<div class="mp_pro_contents">
+			<div class="my_main_position">
+				<p class="my_main_position_title">프로필</p>
+				<div class="my_main_pro_contents">
 					<c:forEach var="userInfoVOs" items="${infoAllDto.userInfoVOs}">
 						<c:choose>
 							<c:when test="${userInfoVOs.userPosition == 'none'}">
-								<p class="mp_profile_position">선호하는 <span>포지션</span>을 설정해주세요</p>
+								<p class="my_main_profile_position">선호하는 <span>포지션</span>을 설정해주세요</p>
 								<button>
 									<a href="prInsertForm.do">PR 글 작성하기</a>
 								</button>
 							</c:when>
 							<c:when test="${userInfoVOs.prNo == -1}">
-								<p class="mp_profile_position">선호하는 <span>포지션</span>을 설정해주세요</p>
+								<p class="my_main_profile_position">선호하는 <span>포지션</span>을 설정해주세요</p>
 								<button>
 									<a href="prInsertForm.do">PR 글 작성하기</a>
 								</button>
 							</c:when>
 							<c:when test="${userInfoVOs.userPosition != none && userInfoVOs.prNo != -1}">
-								<p class="mp_profile_position">현재 설정한 포지션은 <span><b>${userInfoVOs.userPosition}</b></span></p>
+								<p class="my_main_profile_position">현재 설정한 포지션은 <span><b>${userInfoVOs.userPosition}</b></span></p>
 								<button>
 									<a href="prUpdateForm.do?prNo=${userInfoVOs.prNo}">프로필 수정하기</a>
 								</button>
@@ -174,22 +174,22 @@
 				</div>
 			</div>
 
-			<div class="mp_recommend">
-				<p class="mp_reco_title">추천 구인 공고</p>
-				<div class="mp_recos">
+			<div class="my_main_recommend">
+				<p class="my_main_reco_title">추천 구인 공고</p>
+				<div class="my_main_recos">
 					<c:forEach var="jobInfoVOs" items="${infoAllDto.jobInfoVOs}">
-						<div class="mp_reco${jobInfoVOs.no}">
+						<div class="my_main_reco${jobInfoVOs.no}">
 							<a href="#?jobNo=${jobInfoVOs.jobNo}">
-								<div class="mp_reco${jobInfoVOs.no}_1">
+								<div class="my_main_reco${jobInfoVOs.no}_1">
 									<img src="https://via.placeholder.com/250x250" />
 <!-- 									<img src="https://picsum.photos/250/250" /> -->
 								</div>
 	
-								<p class="mp_reco_com_title">${jobInfoVOs.jobSub}</p>
-								<p class="mp_reco_com_content">${jobInfoVOs.jobText}</p>
+								<p class="my_main_reco_com_title">${jobInfoVOs.jobSub}</p>
+								<p class="my_main_reco_com_content">${jobInfoVOs.jobText}</p>
 	
-								<div class="mp_company">
-									<p class="mp_company_name">${jobInfoVOs.userId}</p>
+								<div class="my_main_company">
+									<p class="my_main_company_name">${jobInfoVOs.userId}</p>
 								</div>
 							</a>
 						</div>
