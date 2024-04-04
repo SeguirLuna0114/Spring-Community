@@ -13,13 +13,15 @@
 
 <link rel="shortcut icon" href="${path}/favicon/mypage/music_icon.ico" type="image/x-icon" />
 
-<link href="${path}/css/mypage/reset.css" rel="stylesheet" />
-<link href="${path}/css/mypage/header.css" rel="stylesheet" />
-<link href="${path}/css/mypage/footer.css" rel="stylesheet" />
+<link href="${path}/css/mypage/mypage_reset.css" rel="stylesheet" />
+<link href="${path}/css/mypage/mypage_header.css" rel="stylesheet" />
+<link href="${path}/css/mypage/mypage_footer.css" rel="stylesheet" />
+
+<link href="${path}/css/mypage/pr_like_lists.css" rel="stylesheet" />
+
 <link href="${path}/css/mypage/main.css" rel="stylesheet" />
-<link href="${path}/css/mypage/wanted.css" rel="stylesheet" />
-<link href="${path}/css/mypage/wanted-detail.css" rel="stylesheet" />
-<link href="${path}/css/mypage/company-detail.css" rel="stylesheet" />
+<link href="${path}/css/mypage/liked_detail.css" rel="stylesheet" />
+<link href="${path}/css/mypage/content_detail.css" rel="stylesheet" />
 
 
 <script src="https://kit.fontawesome.com/e264982194.js" crossorigin="anonymous"></script>
