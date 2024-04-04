@@ -1,16 +1,18 @@
-# Compiled class file
-*.class
+# .gitignore
 
-# Log file
-*.log
 
-# BlueJ files
-*.ctxt
+## target 파일
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+obriProject/target/**
+*/target/**
+target/**
 
-# Package Files #
+
+## env 파일(application.properties)
+*/src/main/resources/config/application.properties
+
+
+## Package Files
 *.jar
 *.war
 *.nar
@@ -18,7 +20,3 @@
 *.zip
 *.tar.gz
 *.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
