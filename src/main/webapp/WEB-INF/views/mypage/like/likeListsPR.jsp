@@ -6,8 +6,8 @@
 
 </head>
 
-<div class="wanteds_page">
-	<div class="search_wanted">
+<div class="prlikes_page">
+	<div class="search_prliked">
 		<form name="selectOption" action="likeListsPR.do">
 		<div class="all_position">
 			<div class="select_head">포지션 선택</div>
@@ -92,9 +92,9 @@
 
 	<div class="overBox">
 		<div class="liked">
-			<div class="liked_wanted">
+			<div class="liked_prliked">
 				<div class="liked_title">💖 좋아요한 PR(홍보 글) 💖</div>
-				<div class="wanteds">
+				<div class="prlikeds">
 					<c:if test="${empty pagingPrListVO.likesListPRVOs}">
 						<div class="wanted">
 						    <div class="notice">
@@ -123,7 +123,7 @@
 									</c:choose> --%>
 								</div>
 
-								<div class="wanted_text">
+								<div class="liked_text">
 									<div class="text">
 										<ul>
 											<li class="title">
@@ -134,9 +134,9 @@
 											</li>
 										</ul>
 									</div>
-									<div class="company_intro">
-										<p class="company_region">${likesListPRVOs.prCareer}</p>
-										<p class="company_name">${likesListPRVOs.prMajor}</p>
+									<div class="pr_intro">
+										<p class="pr_region">${likesListPRVOs.prCareer}</p>
+										<p class="pr_name">${likesListPRVOs.prMajor}</p>
 									</div>
 								</div>
 							</a>
