@@ -5,12 +5,12 @@
 <head>
 <link href="${path}/css/mypage/mypage.css" rel="stylesheet" />
 <link href="${path}/css/mypage/subscribes.css" rel="stylesheet" />
-<link href="${path}/css/mypage/proposal.css" rel="stylesheet" />
-<link href="${path}/css/mypage/companypage_recruit_manage.css" rel="stylesheet" />
+<link href="${path}/css/mypage/contLists.css" rel="stylesheet" />
+<link href="${path}/css/mypage/mypage_jobBoard_manage.css" rel="stylesheet" />
 
 <script>
 	function changePage() {
-		var select = document.getElementById("cp_option_select");
+		var select = document.getElementById("my_manage_option_select");
 		var selectedValue = select.options[select.selectedIndex].value;
 
 		if (selectedValue === "applyStatus_main") {
@@ -23,20 +23,20 @@
 </head>
 
 <div id="wrap">
-	<div id="mp_wrap">
+	<div id="my_main_wrap">
 		<div class="mypage">
 			<p class="mypage_title">My Page</p>
 
-			<div class="mp_info">
-				<div class="mp_account">
+			<div class="my_main_info">
+				<div class="my_main_account">
 					<c:forEach var="userInfoVOs" items="${infoAllDto.userInfoVOs}">
-						<div class="mp_img"></div>
-						<div class="mp_acc">
-							<p class="mp_name">${userInfoVOs.userName}</p>
-							<p class="mp_call">${userInfoVOs.userPhone}</p>
-							<p class="mp_email">${userInfoVOs.userEmail}</p>
+						<div class="my_main_img"></div>
+						<div class="my_main_acc">
+							<p class="my_main_name">${userInfoVOs.userName}</p>
+							<p class="my_main_call">${userInfoVOs.userPhone}</p>
+							<p class="my_main_email">${userInfoVOs.userEmail}</p>
 						</div>
-						<div class="mp_acc_setting">
+						<div class="my_main_acc_setting">
 							<button>
 								<a href="editCheck.do">계정 설정하기</a>
 							</button>
@@ -45,8 +45,8 @@
 				</div>
 
 
-				<div class="cp_menu">
-					<select name="cp_option" id="cp_option_select"
+				<div class="my_manage_menu">
+					<select name="my_manage_option" id="my_manage_option_select"
 						onchange="changePage()">
 						<option value="applyStatus_main">지원 공고 관리</option>
 						<option value="recruitStatus_main" selected="selected">
@@ -54,28 +54,28 @@
 					</select>
 				</div>
 
-				<div class="cp_status">
+				<div class="my_manage_status">
 					<c:forEach var="infoCountVOs" items="${infoAllDto.infoCountVOs}">
 						<ul>
 							<li><a href="writeJobStatusAll.do">
-									<div class="cp_status_li2">구인 현황</div>
+									<div class="my_manage_status_li2">구인 현황</div>
 									<div>${infoCountVOs.jobstatusAll}</div>
 							</a></li>
 							<li><a href="likeListsPR.do">
-									<div class="mp_status_li2">좋아요 한 PR</div>
+									<div class="my_main_status_li2">좋아요 한 PR</div>
 									<div>${infoCountVOs.prlikesCount}</div>
 							</a></li>
 							<li><a href="messagebox_snd.do">
-									<div class="mp_status_li3">쪽지함</div>
+									<div class="my_main_status_li3">쪽지함</div>
 									<p class="proposal_notifications"></p>
 									<div>${infoCountVOs.messagesCount}</div>
 							</a></li>
 							<li><a href="commWroteAll.do">
-									<div class="mp_status_li4">커뮤니티 글 관리</div>
+									<div class="my_main_status_li4">커뮤니티 글 관리</div>
 									<div>${infoCountVOs.commCountAll}</div>
 							</a></li>
 							<li><a href="myQnALists.do">
-									<div class="mp_status_li4">문의 글 관리</div>
+									<div class="my_main_status_li4">문의 글 관리</div>
 									<div>${infoCountVOs.qnaCountAll}</div>
 							</a></li>
 						</ul>
@@ -90,20 +90,20 @@
 			</div>
 		</div>
 
-		<div class="cp_contents">
-			<div class="cp_applications">
-				<a href="writeJobStatusAll.do" class="cp_apply_manage">
-					<div class="cp_apply_text">
+		<div class="my_manage_contents">
+			<div class="my_manage_applications">
+				<a href="writeJobStatusAll.do" class="my_manage_apply_manage">
+					<div class="my_manage_apply_text">
 						<p>지원자 관리 바로가기</p>
 						<span>지원/열람/승인한 지원자들을 한 눈에 볼 수 있습니다.</span>
 					</div>
-					<div class="cp_arrow">></div>
+					<div class="my_manage_arrow">></div>
 				</a>
 
-				<div class="cp_search">
+				<div class="my_manage_search">
 					<a href="#" class="subtitle_btn">구인공고 작성</a>
 
-					<div class="cp_select">
+					<div class="my_manage_select">
 						<form name="selectOption" action="mypage_JobBoard.do">
 							<select name="jobplaceName" id="selectPlace">
 								<option value="all" ${empty param.jobplaceName ? 'selected' : ''}>지역</option>
@@ -124,21 +124,21 @@
 					</div>
 				</div>
 
-				<div class="cp_content_wrapper">
+				<div class="my_manage_content_wrapper">
 					<c:forEach var="jobBoardVOs" items="${pagingJobManageVO.jobBoardVOs}">
-						<div class="cp_content_item">
-							<div class="cp_item_top">
-								<div class="cp_item_wanted">
-									<a href="#" class="cp_wanted_link">
+						<div class="my_manage_content_item">
+							<div class="my_manage_item_top">
+								<div class="my_manage_item_wanted">
+									<a href="#" class="my_manage_wanted_link">
 										<p class="wanted_title">${jobBoardVOs.jobsub}</p>
 										<p class="wanted_discribes">${jobBoardVOs.jobtext}</p>
 									</a>
 								</div>
-								<div class="cp_item_state">${jobBoardVOs.jobcd}</div>
-								<div class="cp_item_state">${jobBoardVOs.rno}</div>
+								<div class="my_manage_item_state">${jobBoardVOs.jobcd}</div>
+								<div class="my_manage_item_state">${jobBoardVOs.rno}</div>
 							</div>
-							<div class="cp_item_bot">
-								<a href="#?jobno=${jobBoardVOs.jobno}" class="cp_wanted_modify">수정하기</a>
+							<div class="my_manage_item_bot">
+								<a href="#?jobno=${jobBoardVOs.jobno}" class="my_manage_wanted_modify">수정하기</a>
 							</div>
 						</div>
 					</c:forEach>
