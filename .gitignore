@@ -1,0 +1,16 @@
+# .gitignore
+
+
+## target 파일
+Spring-Community/target/**
+*/target/**
+target/**
+
+
+## env 파일(application.properties)
+*/src/main/resources/config/application.properties
+src/main/resources/config/application.properties
+
+## css 파일
+*.css
+*/css/**
