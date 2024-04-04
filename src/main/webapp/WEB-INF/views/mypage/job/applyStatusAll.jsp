@@ -2,7 +2,7 @@
 pageEncoding="UTF-8"%> <%@ include file="../layout/header.jsp"%>
 
 <head>
-<link href="${path}/css/mypage/application_status_all.css" rel="stylesheet" />
+<link href="${path}/css/mypage/my_app_stat_all.css" rel="stylesheet" />
 
 <script src="${path}/js/mypage/applyStatus.js"></script>
   
@@ -27,44 +27,44 @@ pageEncoding="UTF-8"%> <%@ include file="../layout/header.jsp"%>
 
 
 <div id="wrap">
-  <div id="asa_wrap">
-    <div class="asa_menu">
-      <p class="asa_title">구인 게시판</p>
+  <div id="amast_wrap">
+    <div class="amast_menu">
+      <p class="amast_title">구인 게시판</p>
       <ul>
-        <li class="asa_position">
+        <li class="amast_position">
           <a href="applyStatusAll.do">지원 현황</a>
         </li>
-        <li class="asa_proposal">
+        <li class="amast_proposal">
           <a href="writeJobStatusAll.do">구인 현황</a>
         </li>
       </ul>
     </div>
 
-    <div class="asa_contents">
-      <div class="asa_counts">
+    <div class="amast_contents">
+      <div class="amast_counts">
         <c:forEach var="statusCountVOs" items="${statusAllVO.statusCountVOs}">
-          <div class="asa_count_all">
+          <div class="amast_count_all">
             <a href="applyStatusAll.do">
-              <p class="asa_all_count">${statusCountVOs.appstatusAll}</p>
-              <p class="asa_all_text">전체</p>
+              <p class="amast_all_count">${statusCountVOs.appstatusAll}</p>
+              <p class="amast_all_text">전체</p>
             </a>
           </div>
-          <div class="asa_count_c">
+          <div class="amast_count_c">
             <a href="applyStatus.do">
-              <p class="asa_count">${statusCountVOs.appstatusCont}</p>
-              <p class="asa_text">지원 완료</p>
+              <p class="amast_count">${statusCountVOs.appstatusCont}</p>
+              <p class="amast_text">지원 완료</p>
             </a>
           </div>
-          <div class="asa_count_final">
+          <div class="amast_count_final">
             <a href="applyStatusFin.do">
-              <p class="asa_final_count">${statusCountVOs.appstatusFin}</p>
-              <p class="asa_final_text">최종 컨택</p>
+              <p class="amast_final_count">${statusCountVOs.appstatusFin}</p>
+              <p class="amast_final_text">최종 컨택</p>
             </a>
           </div>
         </c:forEach>
       </div>
 
-      <div class="asa_search">
+      <div class="amast_search">
         <form name="searchAll" action="applyStatusAll.do">
           <input
             id="keyword"
@@ -79,7 +79,7 @@ pageEncoding="UTF-8"%> <%@ include file="../layout/header.jsp"%>
       </div>
 
       <div>
-        <table class="asa_table">
+        <table class="amast_table">
           <thead>
             <tr>
               <th>지원 공고 제목</th>
