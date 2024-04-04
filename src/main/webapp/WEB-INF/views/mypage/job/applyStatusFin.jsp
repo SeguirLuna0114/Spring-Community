@@ -2,7 +2,7 @@
 pageEncoding="UTF-8"%> <%@ include file="../layout/header.jsp"%>
 
 <head>
-<link href="${path}/css/mypage/application_status_final.css" rel="stylesheet" />
+<link href="${path}/css/mypage/my_app_stat_fin.css" rel="stylesheet" />
 
 <script src="${path}/js/mypage/applyStatus.js"></script>
 
@@ -27,44 +27,44 @@ pageEncoding="UTF-8"%> <%@ include file="../layout/header.jsp"%>
 </head>
 
 <div id="wrap">
-  <div id="asf_wrap">
-    <div class="asf_menu">
-      <p class="asf_title">구인 게시판</p>
+  <div id="finast_wrap">
+    <div class="finast_menu">
+      <p class="finast_title">구인 게시판</p>
       <ul>
-        <li class="asf_position">
+        <li class="finast_position">
           <a href="applyStatusAll.do">지원 현황</a>
         </li>
-        <li class="asf_proposal">
+        <li class="finast_proposal">
           <a href="writeJobStatusAll.do">구인 현황</a>
         </li>
       </ul>
     </div>
 
-    <div class="asf_contents">
-      <div class="asf_counts">
+    <div class="finast_contents">
+      <div class="finast_counts">
         <c:forEach var="statusCountVOs" items="${statusFinalVO.statusCountVOs}">
-          <div class="asf_count_all">
+          <div class="finast_count_all">
             <a href="applyStatusAll.do">
-              <p class="asf_all_count">${statusCountVOs.appstatusAll}</p>
-              <p class="asf_all_text">전체</p>
+              <p class="finast_all_count">${statusCountVOs.appstatusAll}</p>
+              <p class="finast_all_text">전체</p>
             </a>
           </div>
-          <div class="asf_count_c">
+          <div class="finast_count_c">
             <a href="applyStatus.do">
-              <p class="asf_count">${statusCountVOs.appstatusCont}</p>
-              <p class="asf_text">지원 완료</p>
+              <p class="finast_count">${statusCountVOs.appstatusCont}</p>
+              <p class="finast_text">지원 완료</p>
             </a>
           </div>
-          <div class="asf_count_final">
+          <div class="finast_count_final">
             <a href="applyStatusFin.do">
-              <p class="asf_final_count">${statusCountVOs.appstatusFin}</p>
-              <p class="asf_final_text">최종 컨택</p>
+              <p class="finast_final_count">${statusCountVOs.appstatusFin}</p>
+              <p class="finast_final_text">최종 컨택</p>
             </a>
           </div>
         </c:forEach>
       </div>
 
-      <div class="asf_search">
+      <div class="finast_search">
         <form
           name="searchFinal"
           action="applyStatusFin.do"
@@ -81,7 +81,7 @@ pageEncoding="UTF-8"%> <%@ include file="../layout/header.jsp"%>
       </div>
 
       <div>
-        <table class="asf_table">
+        <table class="finast_table">
           <thead>
             <tr>
               <th>지원 공고 제목</th>
