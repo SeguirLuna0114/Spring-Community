@@ -2,7 +2,7 @@
 <%@ include file="../layout/header.jsp"%>
 
 <head>
-<link href="${path}/css/mypage/application_status_all.css" rel="stylesheet" />
+<link href="${path}/css/mypage/my_app_stat_all.css" rel="stylesheet" />
 
 <script src="${path}/js/mypage/writejobstatus.js"></script>
 
@@ -26,40 +26,40 @@
 </head>
 
 <div id="wrap">
-	<div id="asa_wrap">
-		<div class="asa_menu">
-			<p class="asa_title">구인 게시판</p>
+	<div id="amast_wrap">
+		<div class="amast_menu">
+			<p class="amast_title">구인 게시판</p>
 			<ul>
-				<li class="asa_proposal"><a href="applyStatusAll.do">지원 현황</a></li>
-				<li class="asa_position"><a href="writeJobStatusAll.do">구인 현황</a></li>
+				<li class="amast_proposal"><a href="applyStatusAll.do">지원 현황</a></li>
+				<li class="amast_position"><a href="writeJobStatusAll.do">구인 현황</a></li>
 			</ul>
 		</div>
 
-		<div class="asa_contents">
-			<div class="asa_counts">
+		<div class="amast_contents">
+			<div class="amast_counts">
 				<c:forEach var="statusCountVOs" items="${jobstatusAllVO.statusCountVOs}">
-					<div class="asa_count_all">
+					<div class="amast_count_all">
 						<a href="writeJobStatusAll.do">
-							<p class="asa_all_count">${statusCountVOs.jobstatusAll}</p>
-							<p class="asa_all_text">전체</p>
+							<p class="amast_all_count">${statusCountVOs.jobstatusAll}</p>
+							<p class="amast_all_text">전체</p>
 						</a>
 					</div>
-					<div class="asa_count_c">
+					<div class="amast_count_c">
 						<a href="writeJobStatus.do">
-							<p class="asa_count">${statusCountVOs.jobstatusCont}</p>
-							<p class="asa_text">진행중</p>
+							<p class="amast_count">${statusCountVOs.jobstatusCont}</p>
+							<p class="amast_text">진행중</p>
 						</a>
 					</div>
-					<div class="asa_count_final">
+					<div class="amast_count_final">
 						<a href="writeJobStatusFin.do">
-							<p class="asa_final_count">${statusCountVOs.jobstatusFin}</p>
-							<p class="asa_final_text">컨택 완료</p>
+							<p class="amast_final_count">${statusCountVOs.jobstatusFin}</p>
+							<p class="amast_final_text">컨택 완료</p>
 						</a>
 					</div>
 				</c:forEach>
 			</div>
 
-			<div class="asa_search">
+			<div class="amast_search">
 				<form name="searchAll" action="writeJobStatusAll.do">
 					<input id="keyword" placeholder="공고 제목/내용 검색" type="text" name="keyword" value="${sessionScope.referer != null ? sessionScope.referer.keyword : ''}" />
 					<%-- <input type="hidden" name="id" value="${jobstatusAllVO.userId}" /> --%>
@@ -68,7 +68,7 @@
 			</div>
 
 			<div>
-				<table class="asa_table">
+				<table class="amast_table">
 					<thead>
 						<tr>
 							<th>작성 공고 제목</th>
