@@ -2,7 +2,7 @@
 <%@ include file="../layout/header.jsp"%>
 
 <head>
-<link href="${path}/css/mypage/application_status.css" rel="stylesheet" />
+<link href="${path}/css/mypage/my_app_stat.css" rel="stylesheet" />
 
 <script src="${path}/js/mypage/writejobstatus.js"></script>
 
@@ -26,40 +26,40 @@
 </head>
 
 <div id="wrap">
-	<div id="as_wrap">
-		<div class="as_menu">
-			<p class="as_title">구인 게시판</p>
+	<div id="ast_wrap">
+		<div class="ast_menu">
+			<p class="ast_title">구인 게시판</p>
 			<ul>
-				<li class="as_proposal"><a href="applyStatusAll.do">지원 현황</a></li>
-				<li class="as_position"><a href="writeJobStatusAll.do">구인 현황</a></li>
+				<li class="ast_proposal"><a href="applyStatusAll.do">지원 현황</a></li>
+				<li class="ast_position"><a href="writeJobStatusAll.do">구인 현황</a></li>
 			</ul>
 		</div>
 
-		<div class="as_contents">
-			<div class="as_counts">
+		<div class="ast_contents">
+			<div class="ast_counts">
 				<c:forEach var="statusCountVOs" items="${jobstatusWaitingVO.statusCountVOs}">
-					<div class="as_count_all">
+					<div class="ast_count_all">
 						<a href="writeJobStatusAll.do">
-							<p class="as_all_count">${statusCountVOs.jobstatusAll}</p>
-							<p class="as_all_text">전체</p>
+							<p class="ast_all_count">${statusCountVOs.jobstatusAll}</p>
+							<p class="ast_all_text">전체</p>
 						</a>
 					</div>
-					<div class="as_count_c">
+					<div class="ast_count_c">
 						<a href="writeJobStatus.do">
-							<p class="as_count">${statusCountVOs.jobstatusCont}</p>
-							<p class="as_text">진행중</p>
+							<p class="ast_count">${statusCountVOs.jobstatusCont}</p>
+							<p class="ast_text">진행중</p>
 						</a>
 					</div>
-					<div class="as_count_final">
+					<div class="ast_count_final">
 						<a href="writeJobStatusFin.do">
-							<p class="as_final_count">${statusCountVOs.jobstatusFin}</p>
-							<p class="as_final_text">컨택 완료</p>
+							<p class="ast_final_count">${statusCountVOs.jobstatusFin}</p>
+							<p class="ast_final_text">컨택 완료</p>
 						</a>
 					</div>
 				</c:forEach>
 			</div>
 
-			<div class="as_search">
+			<div class="ast_search">
 				<form name="search" action="writeJobStatus.do">
 					<input type="text" placeholder="공고 제목/내용 검색" name="keyword" value="${sessionScope.referer != null ? sessionScope.referer.keyword : ''}" />
 					<%-- <input type="hidden" name="id" value="${jobstatusWaitingVO.userId}" /> --%>
@@ -68,7 +68,7 @@
 			</div>
 
 			<div>
-				<table class="as_table">
+				<table class="ast_table">
 					<thead>
 						<tr>
 							<th>작성 공고 제목</th>
